@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-background: #0B0F14;
+  --color-surface: rgba(18, 24, 33, 0.5);
+  --color-primary: #7AA2FF;
+  --color-secondary: #FF8FDA;
+  --color-highlight: #4CFFCC;
+  --color-text-primary: #E6EDF3;
+  --color-text-secondary: #94A3B8;
+  --color-border: #1E293B;
+}
+
+@layer base {
+  :root {
+    --color-background: #0B0F14;
+    --color-surface: rgba(18, 24, 33, 0.5);
+    --color-primary: #7AA2FF;
+    --color-secondary: #FF8FDA;
+    --color-highlight: #4CFFCC;
+    --color-text-primary: #E6EDF3;
+    --color-text-secondary: #94A3B8;
+    --color-border: #1E293B;
+  }
+
+  .light-mode {
+    --color-background: #F6F7FB;
+    --color-surface: rgba(255, 255, 255, 0.5);
+    --color-primary: #5B8CFF;
+    --color-secondary: #FF6EC7;
+    --color-highlight: #2EE6A6;
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+    --color-border: #E2E8F0;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-sans selection:bg-primary/30 transition-colors duration-500;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface backdrop-blur-md border border-border;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-surface/80 hover:border-primary/30 transition-all duration-300;
+  }
+
+  .animate-wave-slow {
+    animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+
+  .animate-wave-medium {
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+
+  .animate-wave-fast {
+    animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+
+  .animate-wave-reverse {
+    animation: wave-reverse 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+
+  @keyframes wave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
+    100% { transform: translateX(0) translateZ(0) scaleY(1); }
+  }
+
+  @keyframes wave-reverse {
+    0% { transform: translateX(-25%) translateZ(0) scaleY(1); }
+    50% { transform: translateX(0) translateZ(0) scaleY(1.2); }
+    100% { transform: translateX(-25%) translateZ(0) scaleY(1); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
