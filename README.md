@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+JothiRamalingam Mj — Portfolio
+A lightweight portfolio site for JothiRamalingam Mj — Full Stack Developer and AI enthusiast.
 
-# Run and deploy your AI Studio app
+About
+I build practical, scalable web applications and AI‑integrated solutions with a focus on clean architecture and performance.
 
-This contains everything you need to run your app locally.
+Tech
+HTML, CSS, JavaScript, React, TypeScript, Three.js
+Python (Django/Flask), Node.js
+SQL, Firebase
+Git, GitHub, VS Code, Claude AI, GitHub Copilot
+Projects
+Featured: Spotifiapi, Joe6905, Breaking Bad API, GamkersGPT, and other personal projects.
 
-View your app in AI Studio: https://ai.studio/apps/2a2b6cc6-7478-41d8-887c-f27a7930b99b
+Contact
+Email: jothishmjk.2405@gmail.com
+LinkedIn: joe-mj
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+© 2026 JothiRamalingam Mj. All rights reserved.
